@@ -4,7 +4,6 @@
 
     // Set up a reactive state variable to hold the button instance
     let button: ConnectButton | undefined = $state();
-    let buttonColor = $state("black");
 
     $effect(() => {
         button?.rdt?.walletApi.setRequestData(
