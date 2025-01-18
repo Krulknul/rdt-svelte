@@ -23,14 +23,6 @@
 
 <p>{button?.walletData?.accounts[0]?.address}</p>
 
-<button
-    onclick={() => {
-        button?.rdt?.walletApi.sendTransaction({ transactionManifest: "" });
-    }}
->
-    sendTransaction
-</button>
-
 <style>
     .connect-button {
         position: fixed;
