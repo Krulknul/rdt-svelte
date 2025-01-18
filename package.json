@@ -1,6 +1,9 @@
 {
 	"name": "rdt-svelte",
-	"version": "0.0.1",
+	"version": "1.0.0",
+	"repository": {
+		"url": "https://github.com/Krulknul/rdt-svelte"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run prepack",
