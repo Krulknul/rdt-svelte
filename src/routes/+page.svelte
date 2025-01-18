@@ -2,12 +2,11 @@
     import ConnectButton from "$lib/ConnectButton.svelte";
     import { DataRequestBuilder } from "@radixdlt/radix-dapp-toolkit";
 
+    // Set up a reactive state variable to hold the button instance
     let button: ConnectButton | undefined = $state();
-
-    $inspect(button?.walletData);
+    let buttonColor = $state("black");
 
     $effect(() => {
-        button?.rdt?.buttonApi.setTheme("black");
         button?.rdt?.walletApi.setRequestData(
             DataRequestBuilder.accounts().exactly(1),
         );
