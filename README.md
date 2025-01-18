@@ -11,9 +11,7 @@ npm install rdt-svelte
 
 ```ts
 <script lang="ts">
-    // When importing from another project, it'd be more like:
-    // import { ConnectButton } from "rdt-svelte";
-    import ConnectButton from "$lib/ConnectButton.svelte";
+    import { ConnectButton } from "rdt-svelte";
     import { DataRequestBuilder } from "@radixdlt/radix-dapp-toolkit";
 
     // Set up a reactive state variable to hold the button instance
