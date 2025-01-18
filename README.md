@@ -11,8 +11,9 @@ npm install rdt-svelte
 
 ```ts
 <script lang="ts">
-    import { ConnectButton } from "rdt-svelte";
-    import { DataRequestBuilder } from "@radixdlt/radix-dapp-toolkit";
+    // Import the component
+    // (Any other RDT types are re-exported by the package)
+    import { ConnectButton, DataRequestBuilder } from "rdt-svelte";
 
     // Set up a reactive state variable to hold the button instance
     let button: ConnectButton | undefined = $state();
