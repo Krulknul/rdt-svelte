@@ -2,6 +2,7 @@
     import {
         DataRequestBuilder,
         RadixDappToolkit,
+        type RadixDappToolkitOptions,
         type WalletDataState,
     } from "@radixdlt/radix-dapp-toolkit";
 
@@ -9,14 +10,11 @@
     let walletData: WalletDataState | undefined = $state();
     export { rdt, walletData };
 
+    let { options }: { options: RadixDappToolkitOptions } = $props();
+
     $effect(() => {
         // Initialize the toolkit
-        const toolkit = RadixDappToolkit({
-            dAppDefinitionAddress:
-                "account_rdx16xdanhhgzzyen33q3fq3ljhekjh0ezh2gnu6z0gcrtsn9u29s2rwu7",
-            networkId: 1,
-            applicationName: "example-dapp",
-        });
+        const toolkit = RadixDappToolkit(options);
         // bridge the wallet data to Svelte reactive state
         toolkit.walletApi.walletData$.subscribe((data) => {
             walletData = data;

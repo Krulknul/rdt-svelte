@@ -18,7 +18,14 @@
 
 <div class="connect-button">
     <!-- Use the component to put the button where you need it, and bind it to the reactive variable -->
-    <ConnectButton bind:this={button} />
+    <ConnectButton
+        bind:this={button}
+        options={{
+            networkId: 1,
+            dAppDefinitionAddress:
+                "account_rdx16xdanhhgzzyen33q3fq3ljhekjh0ezh2gnu6z0gcrtsn9u29s2rwu7",
+        }}
+    />
 </div>
 
 <p>{button?.walletData?.accounts[0]?.address}</p>
